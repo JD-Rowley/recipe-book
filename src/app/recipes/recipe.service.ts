@@ -8,27 +8,33 @@ import { Recipe } from "./recipe.model";
 export class RecipeService {
     recipesChanged = new Subject<Recipe[]>();
     
-    private recipes: Recipe[] = [
-        new Recipe(
-            'Tasty Schnitzel', 
-            'A super-tasty schnitzel - just awesome!',
-            'https://poms-feinkost.de/store/413-medium_default/knusper-schnitzel-gebraten-10-stuck-je-ca-180g.jpg', 
-            [ 
-                new Ingredient('Meat', 1),
-                new Ingredient('French Fries', 20),
-            ]),
-        new Recipe(
-            'Big Fat Burger', 
-            'What else you need to say?',
-            'http://ownchef.files.wordpress.com/2011/12/big-king-xxl1.jpg', 
-            [
-                new Ingredient('Buns', 2),
-                new Ingredient('Meat', 1),
-            ])
-      ];   
+    // private recipes: Recipe[] = [
+    //     new Recipe(
+    //         'Tasty Schnitzel', 
+    //         'A super-tasty schnitzel - just awesome!',
+    //         'https://poms-feinkost.de/store/413-medium_default/knusper-schnitzel-gebraten-10-stuck-je-ca-180g.jpg', 
+    //         [ 
+    //             new Ingredient('Meat', 1),
+    //             new Ingredient('French Fries', 20),
+    //         ]),
+    //     new Recipe(
+    //         'Big Fat Burger', 
+    //         'What else you need to say?',
+    //         'http://ownchef.files.wordpress.com/2011/12/big-king-xxl1.jpg', 
+    //         [
+    //             new Ingredient('Buns', 2),
+    //             new Ingredient('Meat', 1),
+    //         ])
+    //   ];   
+      private recipes: Recipe[] = [];
 
       constructor(private slService: ShoppingListService) {}
       
+      setRecipes(recipes: Recipe[]) {
+        this.recipes = recipes;
+        this.recipesChanged.next(this.recipes.slice());
+      }
+
       getRecipes() {
           return this.recipes.slice();
       }
