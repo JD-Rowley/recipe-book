@@ -1,4 +1,8 @@
-# RecipeBook
+# Recipe Book
+  
+  [
+    <img src="https://img.shields.io/static/v1?label=LICENSE&message=MIT&color=informational&style=for-the-badge" />
+    ](https://choosealicense.com/)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.1.
 
@@ -25,3 +29,19 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+  ## Description
+  This is an app created using Angular and TypeScript that allows the user to create and save recipes while also creating ingredient lists for said recipes.
+  ## Installation
+  This application was created using Node.js, the user simply needs to enter the command 'npm install' or 'npm i' to install dependencies.
+  ## Usage
+  Open the application in the browser and the user will be prompted to either sign in or login. Create a login and the user can now fetch data from the server and add more recipes to the list. 
+  ## Contribution Guidelines
+  No contributions are accepted at this time.
+  ## Testing
+  No testing is necessary.
+  ## Questions
+  * GitHub: [jd-rowley](http://github.com/jd-rowley)
+  * E-mail: jdrowley1989@gmail.com
+
+  ### GitHub Repo: https://github.com/JD-Rowley/recipe-book
